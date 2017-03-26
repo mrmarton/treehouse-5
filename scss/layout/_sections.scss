@@ -1,0 +1,114 @@
+//============================================================
+// Section Styles
+//============================================================
+
+//------------ Profile ------------
+
+#profile {
+  > p {
+    margin-top: 20px;
+  }
+  @include tablet {
+    @include display-flex();
+    > p {
+      margin-top: 0;
+      text-align: left;
+    }
+    .profile-image {
+      order: 2;
+      @include image-container(40%, 40%, 0 0 0 20px);
+    }
+  }
+  @include desktop {
+    .profile-image {
+      @include dimensions(45%, 45%);
+    }
+  }
+}
+
+
+
+//----------- Portfolio -----------
+  
+#portfolio-examples {
+  .description {
+    padding-bottom: 40px;
+  }
+  @include tablet {
+    @include display-flex(space-between);
+    flex-flow: row wrap;
+    .portfolio-block {
+      @include dimensions(49%);
+    }
+    .description {
+      font-size: $small;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+  }
+  @include desktop {
+    .portfolio-block {
+      @include dimensions(32%);
+    }
+  }
+}
+
+
+
+//------------ Skills -------------
+
+#skills-group {
+  @include tablet {
+    @include display-flex();
+    .skills-image {
+      @include image-container(40%, 40%, 0 20px 0 0);
+    }
+  }
+  @include desktop {
+    .skills-image {
+      @include dimensions(45%, 45%);
+    }
+  }
+}
+
+#skills-list {
+  margin-bottom: 0;
+  margin-top: 20px;
+  @include tablet {
+    margin-top: 0;
+  }
+  @include desktop {
+    padding: 0 30px;
+  }
+  li {
+    display: inline-block;
+    @include font-settings($medium, $med-bold, $color-text-light);
+    margin-right: 5px;
+    @include tablet {
+      font-size: $larger;
+    }
+    @include desktop {
+      font-size: $medium;
+    }
+  }
+}
+
+
+
+//------------ Contact ------------
+
+#message {
+  padding-bottom: 20px;
+  @include tablet {
+    padding: 0 100px;
+  }
+  @include desktop {
+    padding: 0 200px;
+  }
+}
+
+.contact-info {
+  margin: 25px 0;
+}
+
+

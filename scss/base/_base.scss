@@ -1,0 +1,87 @@
+//============================================================
+// Base Element Styles
+//============================================================
+
+* {
+  box-sizing: border-box;
+  background-color: $color-background;
+}
+
+body {
+  @extend %font-primary;
+  @include font-settings($x-small, $normal, $color-text-dark);
+  line-height: 1.5;
+  margin: 0 4%;
+  @include desktop {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2%;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  @include tablet {
+    margin-bottom: 5px;
+  }
+}
+
+h1 {
+  @extend %font-secondary;
+  @include font-settings($xx-large, $bold, inherit)
+}
+
+h3 {
+  @extend %font-secondary;
+  @include font-settings($medium, $bold, inherit);
+  @extend %text-upper;
+  margin: 60px 0;
+}
+
+a {
+  @extend %font-secondary;
+  @include font-settings(inherit, $bold, $color-text-light);
+  @extend %text-upper;
+  display: block;
+  text-decoration: none;
+  padding: 12px 0;
+  border-radius: $br;
+  transition: all .3s ease-in-out;
+  &:hover {
+    background-color: $color-link-hover;
+    color: $color-link-active;
+  }
+  &:active {
+    background-color: lighten($color-link-hover, 5%);
+    transform: scale(0.9);
+  }
+  @include tablet {
+    padding: 12px 20px;
+  }
+}
+
+img {
+  max-width: 100%;
+  border-radius: $br;
+}
+
+p {
+  @include font-settings($medium, inherit, $color-text-light);
+  margin: 0;
+  @include tablet {
+    font-size: $larger;
+  }
+  @include desktop {
+    font-size: $medium;
+  }
+}
+
+hr {
+  opacity: 0.4;
+}
+
+

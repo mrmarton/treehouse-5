@@ -1,0 +1,52 @@
+// Font styles
+
+@mixin font-settings($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+
+
+// Flex display settings
+
+@mixin display-flex($justify: null, $align: null) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align; 
+}
+
+
+
+// Dimensions
+
+@mixin dimensions($w: auto, $h: auto) {
+  width: $w;
+  height: $h;
+}
+
+
+
+// Image container
+
+@mixin image-container($w: auto, $h: auto, $margin: 0, $padding: 0) {
+  @include dimensions($w, $h);
+  margin: $margin;
+  padding: $padding; 
+}
+
+
+
+// Media queries
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

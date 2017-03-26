@@ -1,0 +1,49 @@
+//============================================================
+// Footer Styles
+//============================================================
+
+//------------ Footer -------------
+
+footer {
+  @include display-flex(space-between, center);
+  margin: 25px 0;
+  @include tablet {
+    margin: 0 0 50px;
+    > a {
+      display: none;
+    }
+    > p {
+      font-size: $small;
+    }
+  }
+}
+
+
+
+//----------- Navigation ----------
+
+#nav-footer {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+.nav-links-footer {
+  @include tablet {
+    @include display-flex();
+    margin: 0;
+    li {
+      margin-bottom: 0;
+      a {
+        font-size: $xx-small;
+      }
+    }
+  }
+}
+
+#back-to-top {
+  padding: 12px 4px;
+}
+
+
